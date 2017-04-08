@@ -24,9 +24,9 @@ public class FacebookExam {
 		// 遠端資料路徑
 
 		String uri = 
-				"https://graph.facebook.com/v2.6"
-				+ "/search?q="
-				+ "&access_token=";
+				"https://graph.facebook.com/v2.8/"
+				+ "ck101fans/feed?fields=id,reactions.limit(0).summary(total_count)"
+				+ "&access_token=158676744656927%7C4a80f0d1361792ac14bf308d9ea06967";
 
 
 		Elements elems =
@@ -41,7 +41,7 @@ public class FacebookExam {
 			String id = data.select("id").text();
 
 			// FIXIT
-			String reactions = "";
+			String reactions = data.select("reactions").text();
 
 
 			output += id + "," + reactions + "\n";
