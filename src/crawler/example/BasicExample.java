@@ -40,6 +40,7 @@ public class BasicExample {
 				//.select("div.push > .push-tag:contains(→)")
 				jsoup.select("div,span,a").remove();
 				System.out.println(jsoup.text());
+				
 		//);
 	}
 }
